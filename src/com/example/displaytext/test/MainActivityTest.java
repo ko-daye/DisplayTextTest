@@ -33,8 +33,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		mClearButton = (Button)mActivity.findViewById(R.id.deleteButton);
 		mDisplayText = (TextView)mActivity.findViewById(R.id.textBox);
 		
-		mAddButtonString = mActivity.getString(R.id.addButton);
-		mClearButtonString = mActivity.getString(R.id.deleteButton);
+		mAddButtonString = mActivity.getString(R.string.addButton);
+		mClearButtonString = mActivity.getString(R.string.deleteBUtton);
 	}
 	
 	public void testPrecondition() {
@@ -48,6 +48,10 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		assertFalse(mClearButton.isEnabled());
 		
 		assertEquals(mDisplayText.getText().toString(), "");
+	}
+	
+	public void testEnabledAddButton() {
+		
 	}
 	
 }
